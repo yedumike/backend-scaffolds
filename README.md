@@ -168,7 +168,7 @@ python-dotenv
 
 ---
 
-## 📖 Usage Notes
+## Usage Notes
 
 - This repository is meant to **jumpstart backend projects** without repeatedly creating folder structures and placeholder files.
 - The Python scaffold script is fully generic and does **not include project-specific modules**. You can extend it freely.
@@ -176,7 +176,7 @@ python-dotenv
 
 ---
 
-## 👨‍💻 Contribution
+## Contribution
 
 Contributions are welcome! Feel free to:
 
