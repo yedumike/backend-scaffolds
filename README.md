@@ -29,18 +29,42 @@ After running the Python scaffold script, a project folder will look like:
 ```
 
 my_python_project/
-├── app/
-│   ├── config/
-│   ├── middlewares/
-│   ├── modules/
-│   ├── routes/
-│   └── utils/
-├── migrations/
-├── tests/
-├── .env
-├── .gitignore
-├── README.md
-└── requirements.txt
+├── app/                            # Main application package
+│   ├── __init__.py                 # Marks 'app' as a Python package
+│   │
+│   ├── config/                     # Configuration settings
+│   │   ├── __init__.py
+│   │   ├── db.py                   # SQLAlchemy engine & session factory
+│   │   ├── settings.py             # Environment variables & config constants
+│   │   └── logger.py               # Centralized logging setup
+│   │
+│   ├── middlewares/                # Custom middleware for FastAPI
+│   │   ├── __init__.py
+│   │   ├── auth.py                 # JWT auth, role-based access, token verification
+│   │   ├── errors.py               # Centralized exception handling
+│   │   └── validation.py           # Request validation helpers (e.g., Pydantic helpers)
+│   │
+│   ├── modules/                    # Application business modules (generic)
+│   │   └── __init__.py
+│   │
+│   ├── routes/                     # FastAPI routers
+│   │   └── __init__.py             # Main router can include module routers
+│   │
+│   └── utils/                      # Utility/helper functions
+│       ├── __init__.py
+│       ├── constants.py            # Application-wide constants (roles, IDs, etc.)
+│       ├── helpers.py              # Generic helper functions (formatting, conversions)
+│       └── crypto.py               # Password hashing, encryption helpers
+│
+├── migrations/                      # Database migration files (Alembic)
+├── tests/                           # Unit & integration tests
+│
+├── .env                             # Environment variables (DB URLs, secrets)
+├── .gitignore                       # Files/folders to ignore in git (venv, __pycache__, etc.)
+├── README.md                        # Project overview, setup instructions, usage
+├── requirements.txt                 # Python dependencies
+├── app/main.py                       # FastAPI app initialization and router inclusion
+└── app/celery_app.py                 # Celery app instance & task definitions
 
 ```
 
