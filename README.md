@@ -11,7 +11,7 @@ The goal is to have reusable, professional project structures that allow you to 
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 
